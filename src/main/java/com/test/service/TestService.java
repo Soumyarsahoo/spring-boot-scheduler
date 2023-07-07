@@ -1,5 +1,6 @@
 package com.test.service;
 
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -16,6 +17,7 @@ public class TestService {
         System.out.println("DATE1: "+dtf.format(now));
     }
 
+    //@Scheduled(cron = "0 0/30 15-18 * * *") every 30 minutes from 15 to 18
     public void testScheduler2(){
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/uuuu HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
